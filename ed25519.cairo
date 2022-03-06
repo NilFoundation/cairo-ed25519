@@ -1,7 +1,7 @@
-# Implementation of the ECDSA signature verification over the secp256k1 elliptic curve.
+# Implementation of the EDDSA signature verification over the secp256k1 elliptic curve.
 # See information on the curve in secp_def.cairo.
 #
-# The generator point for the ECDSA is:
+# The generator point for the EDDSA is:
 #   G = (
 #       0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798,
 #       0x483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8

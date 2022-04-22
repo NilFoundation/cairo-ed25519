@@ -1,7 +1,7 @@
 %lang starknet
 %builtins range_check bitwise
 
-from sha2_512 import finalize_sha256, sha256
+from sha2_512 import finalize_sha2_512, sha2_512
 from starkware.cairo.common.alloc import alloc
 from starkware.cairo.common.cairo_builtins import BitwiseBuiltin
 
@@ -11,7 +11,7 @@ from starkware.cairo.common.cairo_builtins import BitwiseBuiltin
 # 4*input_len).
 # Returns the 256 output bits as 2 128-bit big-endian integers.
 @view
-func compute_sha256{range_check_ptr, bitwise_ptr : BitwiseBuiltin*}(
+func compute_sha512{range_check_ptr, bitwise_ptr : BitwiseBuiltin*}(
         input_len : felt, input : felt*, n_bytes : felt) -> (res0 : felt, res1 : felt):
     alloc_locals
 

@@ -57,7 +57,7 @@ func sha2_512{range_check_ptr, sha512_ptr : felt*}(input : felt*, n_bytes : felt
 
     let output = sha512_ptr
     %{
-        from starkware.cairo.common.cairo_sha256.sha512_utils import (
+        from starkware.cairo.common.cairo_sha512.sha512_utils import (
             IV, compute_message_schedule, sha2_compress_function)
 
         _sha512_input_chunk_size_felts = int(ids.SHA512_INPUT_CHUNK_SIZE_FELTS)
@@ -96,7 +96,7 @@ func _sha512_input{range_check_ptr, sha512_ptr : felt*}(
     end
 
     assert_nn_le(n_bytes, 3)
-    let (padding) = pow(256, 3 - n_bytes)
+    let (padding) = pow(512, 3 - n_bytes)
     local range_check_ptr = range_check_ptr
 
     assert sha512_ptr[0] = input[0] + padding * 0x80

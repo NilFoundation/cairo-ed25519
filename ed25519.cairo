@@ -92,8 +92,8 @@ func verify_eddsa{range_check_ptr}(
     validate_signature_entry(s)
 
     let gen_pt = EcPoint(
-        BigInt3(0xe28d959f2815b16f81798, 0xa573a1c2c1c0a6ff36cb7, 0x79be667ef9dcbbac55a06),
-        BigInt3(0x554199c47d08ffb10d4b8, 0x2ff0384422a3f45ed1229a, 0x483ada7726a3c4655da4f))
+        BigInt3(0x216936D3CD6E53FEC0A4E, 0x231FDD6DC5C692CC760952, 0x5A7B2C9562D608F25D51A)
+        BigInt3(0x666666666666666666666, 0x6666666666666666666666, 0x666666666666666666658))
 
     # Compute u1 and u2.
     let (u1 : BigInt3) = mul_s_inv(msg_hash, s)
